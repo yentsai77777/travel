@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>山海與自由的回聲｜台東・綠島 4天3夜深度導覽手冊</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --ink-black: #2C2A29;
+      --sage-green: #E2ECE4;
+      --coral-pink: #E8998D;
+      --warm-yellow: #F7E8C4;
+      --sky-blue: #BDE0FE;
+      --mint-pill: #CBE4D6;
+      --font-scale: 1;
+    }
+
+    body {
+      background-color: #E6E1D6;
+      color: var(--ink-black);
+      font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+    }
+
+    /* 長輩大字模式縮放控制 */
+    body.large-text-mode {
+      --font-scale: 1.18;
+    }
+    .scale-text-xs { font-size: calc(0.78rem * var(--font-scale)); line-height: 1.45; }
+    .scale-text-sm { font-size: calc(0.88rem * var(--font-scale)); line-height: 1.55; }
+    .scale-text-base { font-size: calc(1rem * var(--font-scale)); line-height: 1.65; }
+    .scale-text-lg { font-size: calc(1.15rem * var(--font-scale)); line-height: 1.45; }
+    .scale-text-xl { font-size: calc(1.32rem * var(--font-scale)); line-height: 1.35; }
+
+    /* 手機容器外框設計 */
+    .phone-frame {
+      max-width: 460px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: var(--bg-cream);
+      border-left: 3px solid var(--ink-black);
+      border-right: 3px solid var(--ink-black);
+      box-shadow: 0 12px 40px rgba(44, 42, 41, 0.18);
+      position: relative;
+      padding-bottom: 105px;
+    }
+
+    @media (max-width: 480px) {
+      .phone-frame {
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    /* 釜山手繪奶油風粗框與立體硬陰影 */
+    .sketch-box {
+      border: 2.5px solid var(--ink-black);
+      border-radius: 18px;
+      box-shadow: 0 3.5px 0 var(--ink-black);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    }
+
+    .sketch-box-interactive:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--ink-black);
+    }
+
+    .sketch-box-interactive:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4.5px 0 var(--ink-black);
+    }
+
+    .sketch-pill {
+      border: 2px solid var(--ink-black);
+      border-radius: 9999px;
+      box-shadow: 0 2px 0 var(--ink-black);
+    }
+
+    /* 標題藍色與珊瑚色底線裝飾 */
+    .underline-blue {
+      display: inline;
+      background-image: linear-gradient(transparent 62%, var(--sky-blue) 62%);
+      background-repeat: no-repeat;
+      background-size: 100% 95%;
+      padding: 0 2px;
+    }
+
+    .underline-coral {
+      display: inline;
+      background-image: linear-gradient(transparent 62%, #F6C6BD 62%);
+      background-repeat: no-repeat;
+      background-size: 100% 95%;
+      padding: 0 2px;
+    }
+
+    /* 垂直時間軸虛線 */
+    .timeline-dotted-line {
+      position: absolute;
+      left: 69px;
+      top: 16px;
+      bottom: 16px;
+      width: 0;
+      border-left: 3px dotted var(--ink-black);
+      z-index: 1;
+    }
+
+    .timeline-dot {
+      width: 15px;
+      height: 15px;
+      background-color: var(--bg-cream);
+      border: 3px solid var(--ink-black);
+      border-radius: 50%;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    .timeline-dot-active {
+      background-color: var(--coral-pink);
+    }
+
+    /* 第一人稱家書復古信紙格線背景 */
+    .letter-paper {
+      background-color: #FFFDF7;
+      background-image: linear-gradient(transparent 95%, #E8DFCA 95%);
+      background-size: 100% 2.1rem;
+      line-height: 2.1rem;
+      border: 2px solid var(--ink-black);
+      border-radius: 14px;
+    }
+
+    /* 可愛纜車小船移動動畫 */
+    .stepper-mascot {
+      transition: left 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* 隱藏預設卷軸但保留滾動 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes pulse-gentle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    .speaking-pulse {
+      animation: pulse-gentle 1.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="phone-frame" id="appContainer">
+    <!-- 頂部小標欄 -->
+    <div class="text-center py-2 border-b-2 border-[#2C2A29] bg-[#F3EFE6] px-3">
+      <p class="scale-text-xs font-bold tracking-wider text-[#2C2A29]">
+        台東・綠島 4 天 3 夜｜山海與自由的回聲
+      </p>
+    </div>
+
+    <!-- 頂部主導覽列 Header (還原釜山手冊頂部排版) -->
+    <header class="px-5 py-3.5 border-b-[2.5px] border-[#2C2A29] flex items-center justify-between bg-[#FAF7F2] sticky top-0 z-30">
+      <!-- 左側可愛手繪小船/火車 Logo -->
+      <div class="flex items-center gap-2 cursor-pointer" onclick="switchMainTab('itinerary')" title="回到行程首頁">
+        <svg class="w-10 h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="14" width="36" height="26" rx="9" fill="#E8998D" stroke="#2C2A29" stroke-width="2.8"/>
+          <path d="M20 8H28M24 8V14" stroke="#2C2A29" stroke-width="2.8" stroke-linecap="round"/>
+          <rect x="12" y="20" width="10" height="9" rx="2.5" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.4"/>
+          <rect x="26" y="20" width="10" height="9" rx="2.5" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.4"/>
+          <path d="M4 41C9 39 14 43 19 41C24 39 29 43 34 41C39 39 42 42 44 41" stroke="#2C2A29" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="font-black scale-text-sm tracking-tight hidden sm:inline">孝親慢旅手冊</span>
+      </div>
+
+      <!-- 右側三個分頁切換按鈕 -->
+      <nav class="flex items-center gap-1.5" role="tablist">
+        <button id="tabBtn-transport" onclick="switchMainTab('transport')" class="px-3 py-1.5 rounded-full font-bold scale-text-sm transition-all text-[#2C2A29] hover:bg-[#EFECE4]">
+          船班/交通
+        </button>
+        <button id="tabBtn-itinerary" onclick="switchMainTab('itinerary')" class="px-4 py-1.5 rounded-full font-black scale-text-sm transition-all bg-[#E8998D] border-[2.5px] border-[#2C2A29] shadow-[0_2px_0_#2C2A29]">
+          行程
+        </button>
+        <button id="tabBtn-prep" onclick="switchMainTab('prep')" class="px-3 py-1.5 rounded-full font-bold scale-text-sm transition-all text-[#2C2A29] hover:bg-[#EFECE4]">
+          準備
+        </button>
+      </nav>
+    </header>
+
+    <!-- ==================== 分頁 1：行程 (Itinerary) ==================== -->
+    <main id="view-itinerary" class="px-4 pt-5 pb-6">
+      
+      <!-- 水平日期切換軸 (Date Stepper) -->
+      <section class="relative pt-2 pb-5 px-2 select-none" aria-label="日期切換">
+        <!-- 水平實線 -->
+        <div class="relative mx-8 h-[3px] bg-[#2C2A29] top-[11px] z-0"></div>
+
+        <!-- 移動的可愛珊瑚粉小圖示 (Mascot) -->
+        <div id="stepperMascot" class="stepper-mascot absolute top-[21px] z-20 -translate-x-1/2 pointer-events-none" style="left: 12.5%;">
+          <svg class="w-11 h-11 drop-shadow-sm" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 2V10" stroke="#2C2A29" stroke-width="2.8" stroke-linecap="round"/>
+            <rect x="8" y="10" width="32" height="24" rx="8" fill="#E8998D" stroke="#2C2A29" stroke-width="2.6"/>
+            <rect x="13" y="15" width="9" height="8" rx="2" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.2"/>
+            <rect x="26" y="15" width="9" height="8" rx="2" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.2"/>
+          </svg>
+        </div>
+
+        <!-- 4 個日期節點 -->
+        <div class="grid grid-cols-4 relative z-10">
+          <!-- Day 1 -->
+          <button onclick="selectDay(0)" class="flex flex-col items-center group focus:outline-none">
+            <div id="stepDot-0" class="w-5 h-5 rounded-full bg-[#FAF7F2] border-[3px] border-[#2C2A29] transition-transform group-hover:scale-110"></div>
+            <div class="h-9"></div>
+            <span id="stepLabel-0" class="px-2.5 py-0.5 rounded-full font-black scale-text-sm bg-[#E8998D] text-[#2C2A29] transition-colors">
+              Day 1
+            </span>
+            <span class="scale-text-xs text-[#6E6A66] font-bold mt-0.5">台東市區</span>
+          </button>
+
+          <!-- Day 2 -->
+          <button onclick="selectDay(1)" class="flex flex-col items-center group focus:outline-none">
+            <div id="stepDot-1" class="w-5 h-5 rounded-full bg-[#FAF7F2] border-[3px] border-[#2C2A29] transition-transform group-hover:scale-110"></div>
+            <div class="h-9"></div>
+            <span id="stepLabel-1" class="px-2.5 py-0.5 rounded-full font-bold scale-text-sm text-[#2C2A29] transition-colors">
+              Day 2
+            </span>
+            <span class="scale-text-xs text-[#6E6A66] font-bold mt-0.5">東海岸</span>
+          </button>
+
+          <!-- Day 3 -->
+          <button onclick="selectDay(2)" class="flex flex-col items-center group focus:outline-none">
+            <div id="stepDot-2" class="w-5 h-5 rounded-full bg-[#FAF7F2] border-[3px] border-[#2C2A29] transition-transform group-hover:scale-110"></div>
+            <div class="h-9"></div>
+            <span id="stepLabel-2" class="px-2.5 py-0.5 rounded-full font-bold scale-text-sm text-[#2C2A29] transition-colors">
+              Day 3
+            </span>
+            <span class="scale-text-xs text-[#6E6A66] font-bold mt-0.5">跨海綠島</span>
+          </button>
+
+          <!-- Day 4 -->
+          <button onclick="selectDay(3)" class="flex flex-col items-center group focus:outline-none">
+            <div id="stepDot-3" class="w-5 h-5 rounded-full bg-[#FAF7F2] border-[3px] border-[#2C2A29] transition-transform group-hover:scale-110"></div>
+            <div class="h-9"></div>
+            <span id="stepLabel-3" class="px-2.5 py-0.5 rounded-full font-bold scale-text-sm text-[#2C2A29] transition-colors">
+              Day 4
+            </span>
+            <span class="scale-text-xs text-[#6E6A66] font-bold mt-0.5">溫柔賦歸</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 當日主題摘要卡 (Day Summary Card - 鼠尾草綠圓角粗框卡片) -->
+      <section id="daySummaryCard" class="sketch-box bg-[#E2ECE4] p-4 mb-6 flex items-center gap-3.5">
+        <!-- 由 JS 動態渲染 SVG 插圖與當日摘要 -->
+      </section>
+
+      <!-- 操作小提示條 -->
+      <div class="mb-4 px-3 py-2 rounded-xl bg-[#F7E8C4] border-2 border-[#2C2A29] flex items-center justify-between">
+        <span class="scale-text-xs font-bold text-[#2C2A29]">
+          💡 點擊標有「<span class="underline">📖 讀故事</span>」的景點卡，可聽語音家書與歷史問答！
+        </span>
+      </div>
+
+      <!-- 垂直虛線時間軸容器 (Vertical Timeline) -->
+      <section class="relative pl-1 pr-0.5" id="timelineWrapper">
+        <div class="timeline-dotted-line"></div>
+        <div id="timelineList" class="space-y-4 relative z-10">
+          <!-- 由 JS 動態渲染當日時間軸節點 -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==================== 分頁 2：船班/交通與花費 (Transport) ==================== -->
+    <main id="view-transport" class="px-4 pt-5 pb-8 hidden space-y-5">
+      
+      <!-- 交通總覽標題卡 -->
+      <div class="sketch-box bg-[#E2ECE4] p-4">
+        <div class="flex items-center gap-2.5 mb-1">
+          <span class="text-2xl">⛴️</span>
+          <h2 class="scale-text-lg font-black">大眾運輸＆綠島船班安心指南</h2>
+        </div>
+        <p class="scale-text-xs text-[#4A4745] font-medium">
+          專為爸媽設計的慢活接駁方案：結合台鐵新自強號、台灣好行海岸線與短程預約計程車，零自駕疲勞！
+        </p>
+      </div>
+
+      <!-- 1. 富岡—綠島客輪防暈船 3 大貼心守則 -->
+      <section class="sketch-box bg-white p-4">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="scale-text-base font-black underline-coral">🌊 爸媽搭船防暈 3 大貼心守則</h3>
+          <span class="sketch-pill bg-[#F7E8C4] px-2.5 py-0.5 scale-text-xs font-bold">航程 50 分鐘</span>
+        </div>
+        <ul class="space-y-2.5 scale-text-sm text-[#2C2A29]">
+          <li class="flex items-start gap-2">
+            <span class="font-black text-[#D96B5C]">①</span>
+            <div>
+              <strong>選對黃金座位（船尾底層中央）：</strong>上船後直接往<strong>「底層船艙的中後段中間排」</strong>坐，搖晃感最小，且不吹海風油煙。
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-black text-[#D96B5C]">②</span>
+            <div>
+              <strong>提前 30 分鐘服藥＋飲食忌口：</strong>在富岡漁港候船室（開船前 30 分鐘）先喝溫水服暈船藥；早餐切勿喝牛奶、豆漿或吃太飽。
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-black text-[#D96B5C]">③</span>
+            <div>
+              <strong>歷史航線今昔對比：</strong>1951 年政治犯前輩搭鐵殼登陸艇在海上悶了兩天兩夜；現在我們搭雙引擎高速客輪（凱旋／天王星號）吹冷氣閉目養神一下就到囉！
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 2. 班次時刻表整理 -->
+      <section class="sketch-box bg-white p-4 space-y-3">
+        <h3 class="scale-text-base font-black underline-blue">🕒 核心交通班次時刻速查表</h3>
+        
+        <div class="p-3 rounded-xl bg-[#FAF7F2] border-2 border-[#2C2A29]">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black scale-text-sm">🚂 台鐵新自強號（EMU3000）</span>
+            <span class="scale-text-xs font-bold text-[#5C7A67]">需提前 28 天訂票</span>
+          </div>
+          <p class="scale-text-xs text-[#4A4745]">・去程 Day 1：台北 08:00 ➔ 台東 12:20（約 4.3 小時）</p>
+          <p class="scale-text-xs text-[#4A4745]">・回程 Day 4：台東 16:15 ➔ 台北 20:30（車上吃池上鐵路便當）</p>
+        </div>
+
+        <div class="p-3 rounded-xl bg-[#FAF7F2] border-2 border-[#2C2A29]">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black scale-text-sm">🚌 台灣好行「東部海岸線 8101A」</span>
+            <span class="scale-text-xs font-bold text-[#5C7A67]">一日券無限搭乘</span>
+          </div>
+          <p class="scale-text-xs text-[#4A4745]">・Day 2 路線：台東轉運站 (08:30) ➔ 都蘭糖廠 (09:15) ➔ 東河包子 (11:55)</p>
+          <p class="scale-text-xs text-[#4A4745]">・泰源幽谷段：由東河預約計程車直達台 23 線登仙橋與泰源村（單趟 20 分鐘），保護長輩體力免久候公車。</p>
+        </div>
+
+        <div class="p-3 rounded-xl bg-[#FAF7F2] border-2 border-[#2C2A29]">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-black scale-text-sm">⛴️ 台東富岡 ⇄ 綠島南寮客輪</span>
+            <span class="scale-text-xs font-bold text-[#D96B5C]">攜帶身分證/敬老卡</span>
+          </div>
+          <p class="scale-text-xs text-[#4A4745]">・去程 Day 3：09:30 開船（08:50 於富岡候船室取票登船）</p>
+          <p class="scale-text-xs text-[#4A4745]">・回程 Day 4：14:30 開船（15:20 抵達富岡，預約計程車直達台東車站）</p>
+        </div>
+      </section>
+
+      <!-- 3. 預估總花費明細表（支援切換一般全票 vs 65歲敬老半價試算） -->
+      <section class="sketch-box bg-white p-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <h3 class="scale-text-base font-black underline-blue">💰 每人預估花費試算器</h3>
+          <div class="inline-flex rounded-full border-2 border-[#2C2A29] bg-[#FAF7F2] p-0.5 self-start">
+            <button id="priceBtn-regular" onclick="toggleFareMode('regular')" class="px-3 py-1 rounded-full scale-text-xs font-black bg-[#E8998D] text-[#2C2A29] transition-all">
+              一般全票
+            </button>
+            <button id="priceBtn-senior" onclick="toggleFareMode('senior')" class="px-3 py-1 rounded-full scale-text-xs font-bold text-[#2C2A29] transition-all">
+              👵 65歲敬老半價
+            </button>
+          </div>
+        </div>
+
+        <div id="fareTableContainer" class="space-y-2 scale-text-sm">
+          <!-- 由 JS 動態計算渲染 -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==================== 分頁 3：行前準備與歷史人物圖鑑 (Prep) ==================== -->
+    <main id="view-prep" class="px-4 pt-5 pb-8 hidden space-y-5">
+      
+      <!-- 1. 長輩安心打包 Checklist -->
+      <section class="sketch-box bg-white p-4">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="scale-text-lg font-black underline-coral">🧳 帶爸媽出遊安心打包清單</h2>
+          <span id="checklistCounter" class="sketch-pill bg-[#E2ECE4] px-2.5 py-0.5 scale-text-xs font-black">0 / 7 完成</span>
+        </div>
+        <p class="scale-text-xs text-[#6E6A66] mb-3">點擊下方項目即可打勾紀錄，確保長輩旅途舒適無憂：</p>
+
+        <!-- 進度條 -->
+        <div class="w-full h-3.5 bg-[#FAF7F2] border-2 border-[#2C2A29] rounded-full overflow-hidden mb-4">
+          <div id="checklistProgress" class="h-full bg-[#E8998D] transition-all duration-300" style="width: 0%;"></div>
+        </div>
+
+        <div id="checklistItems" class="space-y-2.5">
+          <!-- 由 JS 渲染可勾選項目 -->
+        </div>
+      </section>
+
+      <!-- 2. 山海與人權：核心歷史人物小圖鑑 -->
+      <section class="sketch-box bg-[#E2ECE4] p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xl">📜</span>
+          <h2 class="scale-text-lg font-black">山海與人權：5 位核心人物小圖鑑</h2>
+        </div>
+        <p class="scale-text-xs text-[#4A4745] mb-3.5">
+          這趟旅程將「原住民族歷史」與「綠島人權史」串聯起來的靈魂人物，隨時可翻給爸媽認識：
+        </p>
+
+        <div id="historicalFiguresList" class="space-y-3">
+          <!-- 由 JS 渲染 5 位歷史人物小卡 -->
+        </div>
+      </section>
+
+      <!-- 3. 期末專題設計理念與課堂史料說明卡 -->
+      <section class="sketch-box bg-[#F7E8C4] p-4">
+        <h3 class="scale-text-base font-black mb-1.5">🎓 期末專題策展說明（數位工具解決痛點）</h3>
+        <p class="scale-text-xs text-[#2C2A29] leading-relaxed">
+          本互動手冊針對<strong>「對歷史有興趣但無深厚基礎的父母」</strong>設計。透過奶油手繪風時間軸消弭傳統白色恐怖與理蕃政策史料的冰冷沉重感，並以<strong>「Web Speech 語音家書朗讀」</strong>與<strong>「互動問答」</strong>促進兩代旅途對話。點擊右下角按鈕可直接匯出完整 8 欄位 Excel 行程表。
+        </p>
+      </section>
+
+    </main>
+
+    <!-- ==================== 右下角懸浮長輩友善與作業匯出按鈕 ==================== -->
+    <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-2.5 items-end">
+      <!-- 匯出 Excel (CSV) 行程表按鈕 -->
+      <button onclick="exportScheduleCSV()" class="sketch-box sketch-box-interactive bg-[#F7E8C4] px-3.5 py-2 flex items-center gap-1.5 font-black scale-text-xs text-[#2C2A29]" title="下載期末專題要求的每日詳細行程 Excel (CSV) 表">
+        <span>📊</span>
+        <span>匯出 Excel 行程表</span>
+      </button>
+
+      <!-- 大字模式切換按鈕 -->
+      <button id="largeTextToggleBtn" onclick="toggleLargeTextMode()" class="sketch-box sketch-box-interactive bg-[#E2ECE4] px-3.5 py-2.5 flex items-center gap-1.5 font-black scale-text-xs text-[#2C2A29]" title="切換長輩適讀大字體">
+        <span>🔍</span>
+        <span id="largeTextBtnLabel">長輩大字模式：關</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ==================== 雙模式歷史互動彈出視窗 (Modal) ==================== -->
+  <div id="storyModalBackdrop" class="fixed inset-0 bg-black/55 z-50 hidden flex items-center justify-center p-3 sm:p-4 backdrop-blur-[2px]" onclick="handleBackdropClick(event)">
+    <div class="sketch-box bg-[#FAF7F2] w-full max-w-[440px] max-h-[90vh] flex flex-col overflow-hidden animate-fadeIn" onclick="event.stopPropagation()">
+      
+      <!-- Modal 頂部標題列 -->
+      <div class="bg-[#E2ECE4] px-4 py-3.5 border-b-[2.5px] border-[#2C2A29] flex items-start justify-between gap-2">
+        <div>
+          <span id="modalDayBadge" class="inline-block px-2 py-0.5 rounded-md bg-[#F7E8C4] border-[1.8px] border-[#2C2A29] scale-text-xs font-black mb-1">
+            Day 1・核心歷史現場
+          </span>
+          <h3 id="modalSpotTitle" class="scale-text-lg font-black text-[#2C2A29]">
+            景點名稱
+          </h3>
+        </div>
+        <button onclick="closeStoryModal()" class="w-9 h-9 rounded-full bg-white border-[2.5px] border-[#2C2A29] shadow-[0_2px_0_#2C2A29] flex items-center justify-center font-black text-lg active:translate-y-0.5 shrink-0" aria-label="關閉視窗">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal 雙模式切換 Tabs -->
+      <div class="grid grid-cols-2 gap-2 px-4 pt-3 bg-[#FAF7F2]">
+        <button id="modalTabBtn-story" onclick="switchModalTab('story')" class="py-2 px-2 rounded-xl font-black scale-text-xs border-[2.5px] border-[#2C2A29] bg-[#E8998D] shadow-[0_2px_0_#2C2A29] transition-all flex items-center justify-center gap-1">
+          <span>📖</span>
+          <span>故事與史料導讀</span>
+        </button>
+        <button id="modalTabBtn-letter" onclick="switchModalTab('letter')" class="py-2 px-2 rounded-xl font-bold scale-text-xs border-[2.5px] border-[#2C2A29] bg-white text-[#2C2A29] transition-all flex items-center justify-center gap-1">
+          <span>✉️</span>
+          <span>第一人稱家書/語音</span>
+        </button>
+      </div>
+
+      <!-- Modal 可捲動內容區 -->
+      <div class="p-4 overflow-y-auto space-y-4 flex-1" id="modalScrollBody">
+        
+        <!-- Tab 1 內容：白話歷史導讀與行程意義 -->
+        <div id="modalContent-story" class="space-y-3.5">
+          <div class="bg-white p-3.5 rounded-2xl border-2 border-[#2C2A29]">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <span class="text-base">🗣️</span>
+              <h4 class="font-black scale-text-sm underline-blue">講給爸媽聽的白話歷史</h4>
+            </div>
+            <p id="modalStoryText" class="scale-text-sm text-[#2C2A29] leading-relaxed"></p>
+          </div>
+
+          <div class="bg-[#E2ECE4]/70 p-3.5 rounded-2xl border-2 border-[#2C2A29]">
+            <div class="flex items-center gap-1.5 mb-1.5">
+              <span class="text-base">❤️</span>
+              <h4 class="font-black scale-text-sm underline-coral">為什麼想帶爸媽來這裡？（行程意義）</h4>
+            </div>
+            <p id="modalSignificanceText" class="scale-text-sm text-[#2C2A29] leading-relaxed"></p>
+          </div>
+
+          <div>
+            <h4 class="font-black scale-text-xs text-[#6E6A66] mb-1.5">📚 介入之課堂史料／歷史事件／重要人物：</h4>
+            <div id="modalMaterialsTags" class="flex flex-wrap gap-1.5"></div>
+          </div>
+        </div>
+
+        <!-- Tab 2 內容：歷史人物第一人稱家書／視角 + Web Speech 語音朗讀 -->
+        <div id="modalContent-letter" class="space-y-3.5 hidden">
+          <!-- 語音導覽控制面板 -->
+          <div class="bg-[#F7E8C4] p-3 rounded-2xl border-2 border-[#2C2A29] flex items-center justify-between gap-2">
+            <div>
+              <p class="font-black scale-text-xs text-[#2C2A29]">🎧 長輩免看字・語音家書朗讀</p>
+              <p id="speechStatusText" class="scale-text-xs text-[#5C5854]">點擊右側按鈕，用溫和語速朗讀給爸媽聽</p>
+            </div>
+            <button id="ttsPlayBtn" onclick="toggleSpeech()" class="sketch-pill bg-[#E8998D] px-3.5 py-2 font-black scale-text-xs text-[#2C2A29] flex items-center gap-1.5 shrink-0 active:translate-y-0.5">
+              <span id="ttsBtnIcon">🔊</span>
+              <span id="ttsBtnText">播放語音</span>
+            </button>
+          </div>
+
+          <!-- 角色與史料根據標註 -->
+          <div class="px-3 py-2 rounded-xl bg-[#E2ECE4] border-2 border-[#2C2A29]">
+            <p class="scale-text-xs font-bold text-[#2C2A29]">
+              👤 視角設定：<span id="modalPersonaTitle" class="font-black"></span>
+            </p>
+          </div>
+
+          <!-- 復古信紙獨白區 -->
+          <div class="letter-paper p-4 shadow-inner">
+            <p id="modalMonologueText" class="scale-text-base font-medium text-[#2C2A29] whitespace-pre-line"></p>
+          </div>
+        </div>
+
+        <!-- 底部固定顯示：跟爸媽聊聊天・1 題互動小問答 -->
+        <div class="pt-2 border-t-2 border-dashed border-[#2C2A29]">
+          <div class="bg-[#FFF9EB] p-3.5 rounded-2xl border-[2.5px] border-[#2C2A29]">
+            <div class="flex items-center gap-1.5 mb-2">
+              <span class="text-lg">💡</span>
+              <h4 class="font-black scale-text-sm text-[#2C2A29]">跟爸媽聊聊天：旅途互動小問答</h4>
+            </div>
+            <p id="modalQuizQuestion" class="scale-text-sm font-bold text-[#2C2A29] mb-3"></p>
+            
+            <div id="modalQuizOptions" class="space-y-2">
+              <!-- 由 JS 動態生成 (A)(B)(C) 三個選項按鈕 -->
+            </div>
+
+            <!-- 答題後的溫暖歷史解析 -->
+            <div id="modalQuizExplanation" class="mt-3 p-3 rounded-xl border-2 border-[#2C2A29] hidden">
+              <p id="modalQuizResultBadge" class="font-black scale-text-sm mb-1"></p>
+              <p id="modalQuizExplanationText" class="scale-text-xs text-[#2C2A29] leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 輕量提示 Toast -->
+  <div id="toastMessage" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden sketch-pill bg-[#2C2A29] text-[#FAF7F2] px-4 py-2 scale-text-xs font-bold shadow-lg">
+    已成功匯出行程表！
+  </div>
+
+  <script>
+    // =========================================================================
+    // 1. 完整 4 天 3 夜時間軸與 8 大核心歷史景點資料庫（零省略完整內建）
+    // =========================================================================
+    const ITINERARY_DATA = [
+      {
+        day: 1,
+        dateLabel: "Day 1",
+        areaShort: "台東市區",
+        title: "土地的原初記憶：原民千年文化與政權碰撞",
+        stay: "住：台東市區飯店（無障礙電梯房）",
+        elderTip: "今日步調輕鬆，卑南遺址與鐵花村皆為平坦步道，隨時有長椅與冷氣展館可休息。",
+        svgType: "day1",
+        events: [
+          {
+            time: "08:00",
+            type: "transport",
+            badge: "🚂 台鐵新自強號",
+            badgeColor: "#CBE4D6",
+            route: "台北車站 → 台東火車站",
+            subNote: "總時間約 4.5 小時｜穿越花東縱谷進入原民傳統領域，備妥溫熱水與頸枕",
+            csvTopic: "穿越中央山脈與花東縱谷，進入原住民族傳統領域",
+            csvMaterial: "清領「開山撫番」古道與鐵路開發脈絡對照",
+            csvCost: "NT$783 (敬老半價 NT$392)"
+          },
+          {
+            time: "12:30",
+            type: "food",
+            title: "午餐：台東市區原民風味餐",
+            subNote: "品嚐小米阿拜與山蘇野菜，餐廳有冷氣與靠背座椅，先讓爸媽休息上洗手間",
+            csvTopic: "從阿美族與卑南族的飲食認識自然共生哲學",
+            csvMaterial: "原住民族採集文化與戰後飲食變遷",
+            csvCost: "NT$350"
+          },
+          {
+            time: "14:15",
+            type: "spot",
+            spotId: "spot-1",
+            title: "卑南遺址公園",
+            subNote: "千年石板棺與台灣玉器搶救現場（園區平坦、展館有冷氣與無障礙廁所）",
+            story: "爸、媽，我們現在踩的這片草地，地底下藏著三千年前台灣人的家！1980 年代為了蓋台東火車站（南迴鐵路），怪手一挖下去，竟然挖出上千座史前石板棺和精美的台灣玉器，震驚了全世界。這才讓大家意識到，在漢人、日本人甚至荷蘭人來台灣之前，原住民族的祖先早就有一套非常成熟、跟大自然和平共處的生活秩序與信仰。",
+            significance: "把這裡當作第一站，是想跟你們一起把時間軸拉到最源頭。先看看這片土地原本的主人怎麼生活，接下來幾天就會看懂，當外來政權一步步走進東台灣時，部落經歷了多大的震撼。（園區平坦好走，展示館有冷氣與無障礙廁所）",
+            materials: ["1980年卑南遺址鐵路施工搶救事件", "國定遺址月形石柱", "宋文薰與連照美教授考古報告"],
+            persona: "1980 年參與卑南遺址搶救的台東卑南族青年（根據卑南遺址搶救運動口述史改編）",
+            monologue: "「火車站的怪手轟隆隆地開進來時，好多石板棺就這樣被挖破了。老一輩的族人看了好心疼，說那是祖先沉睡的地方，怎麼可以為了鋪鐵軌就隨便驚擾？\n\n我蹲在泥土裡，看著考古老師小心翼翼刷開一塊翠綠的玉耳玦。那一刻我突然明白，我們不是沒有歷史的人，我們的歷史就寫在台東的泥土裡，等著後代子孫讀懂它。」",
+            quiz: {
+              question: "爸媽猜猜看，1980 年卑南遺址是因為要興建哪一項重大工程，才意外被大規模挖掘出來的呢？",
+              options: ["(A) 台東機場擴建", "(B) 台鐵南迴鐵路與台東新站工程", "(C) 台11線濱海公路拓寬"],
+              answerIndex: 1,
+              explanation: "答案是 (B)！當年為了交通建設差點毀掉千年遺址，幸好考古學家與地方人士緊急搶救，才保住了這座全台規模最大的石板棺聚落。我們今天剛搭火車抵達的台東車站，就緊鄰著這座千年聚落喔！"
+            },
+            csvCost: "門票 NT$30 (長者 NT$15)"
+          },
+          {
+            time: "16:15",
+            type: "transport",
+            badge: "🚌 市區公車",
+            badgeColor: "#BDE0FE",
+            route: "卑南遺址 → 台東海濱公園",
+            subNote: "總時間約 20 分鐘｜搭乘普悠瑪客運市區循環線",
+            csvTopic: "台東平原至太平洋岸的聚落空間移動",
+            csvMaterial: "台東馬卡巴嗨文化地景",
+            csvCost: "NT$25"
+          },
+          {
+            time: "16:30",
+            type: "spot",
+            spotId: "spot-2",
+            title: "台東海濱公園 ➔ 鐵花新聚落",
+            subNote: "吹太平洋海風漫步，認識清末「開山撫番」與日治「集團移住」對部落的衝擊",
+            story: "吹著太平洋的海風，這裡以前是阿美族人捕魚、舉辦豐年祭的傳統海灘。但從清朝末年的「開山撫番」，到日本時代的「理蕃政策」，統治者為了開發東台灣的樟腦、糖業與土地，強迫住在高山或海邊的原住民遷村（集團移住），甚至爆發了大港口事件、麻荖漏事件等慘烈的抗爭。戰後，許多受過高等教育的原住民菁英原本期待能迎來自治與和平，卻沒想到另一場名為「白色恐怖」的風暴正在海的對岸等著他們。",
+            significance: "傍晚在這裡看海散步最舒服，不曬太陽又能聽音樂。我們在這裡先認識原住民族「守護家園」的心情，為明天去東海岸、後天去綠島的故事埋下伏筆。（步道平坦且多長椅可隨時坐下）",
+            materials: ["清末開山撫番史料", "日治《理蕃誌稿》集團移住紀錄", "1911年麻荖漏事件"],
+            persona: "日治時期被迫「集團移住」的台東阿美族長輩（根據《理蕃誌稿》與部落遷徙口述史改編）",
+            monologue: "「日本警察拿著地圖來部落，說我們原本住的山坡跟海邊不方便管理，命令全村拆掉茅草屋，搬到他們畫好格子的新村莊去種甘蔗、修馬路。\n\n離開祖靈屋的那天，阿公抓了一把舊部落的泥土包在布巾裡。他說，不管上面的統治者換成穿清朝官服的、穿日本軍裝的、還是說國語的人，只要還聽得見太平洋的海浪聲，我們就不能忘記自己的名字。」",
+            quiz: {
+              question: "日本時代為了方便管理原住民並徵調勞力，曾把深山或分散的部落強迫搬遷到平地集中管理，這項政策叫做什麼呢？",
+              options: ["(A) 耕者有其田", "(B) 集團移住", "(C) 八田與一計畫"],
+              answerIndex: 1,
+              explanation: "答案是 (B) 集團移住！許多現在花東縱谷與海岸線整齊如棋盤的部落街道，其實都是當年被迫遷村留下的歷史痕跡。"
+            },
+            csvCost: "免費 (飲品約 NT$120)"
+          },
+          {
+            time: "18:30",
+            type: "food",
+            title: "晚餐與飯店休息",
+            subNote: "享用台東在地溫補合菜，早點休息養足體力，準備明日東海岸之旅",
+            csvTopic: "慢活整理首日心情，預告明日東海岸山海交界的抵抗故事",
+            csvMaterial: "無",
+            csvCost: "晚餐 NT$400 / 住宿 NT$1,800"
+          }
+        ]
+      },
+      {
+        day: 2,
+        dateLabel: "Day 2",
+        areaShort: "東海岸",
+        title: "山海交界的抵抗：東海岸部落與「泰源事件」交會",
+        stay: "住：台東市區／富岡飯店",
+        elderTip: "今日重點為原民與白色恐怖政治犯交會的「泰源事件」，山區段安排專車接駁免等公車。",
+        svgType: "day2",
+        events: [
+          {
+            time: "08:30",
+            type: "transport",
+            badge: "🚌 台灣好行",
+            badgeColor: "#CBE4D6",
+            route: "台東轉運站 → 都蘭糖廠",
+            subNote: "總時間約 45 分鐘｜東部海岸線 8101A，上車前先於轉運站上洗手間",
+            csvTopic: "沿台11線北上，觀察阿美族依山傍海聚落與殖民糖業遺緒",
+            csvMaterial: "日治時期東台灣糖業開發與阿美族勞動力徵調史料",
+            csvCost: "一日券 NT$299"
+          },
+          {
+            time: "09:20",
+            type: "spot",
+            spotId: "spot-3",
+            title: "新東糖廠文化園區（都蘭糖廠）與都蘭部落",
+            subNote: "喝台東紅烏龍茶看老煙囪彈孔，認識阿美族護地精神与藝術重生",
+            story: "我們現在走進的「都蘭糖廠」，是日本時代民間經營的紅糖製造廠，二戰末期還曾經被盟軍飛機轟炸過，仔細看園區的樑柱上還留著彈孔呢！在都蘭（Etolan，阿美語意思是「石頭很多的地方」），阿美族人世世代代靠著砌石頭開墾梯田、潛水抓魚維生。雖然糖廠一度見證了殖民經濟對部落土地的徵用，但現在卻成了原住民木雕家、歌手與青年返鄉創作的基地。",
+            significance: "這裡有充滿懷舊味的木造辦公室跟老煙囪，很適合爸媽喝杯台東紅烏龍茶、休息拍照，同時看看原住民文化怎麼從過去的壓迫中重新長出美麗的藝術花朵。",
+            materials: ["二戰末期都蘭糖廠空襲紀錄", "阿美族都蘭部落年齡階層（Kaput）與護地運動史料"],
+            persona: "返鄉駐村的都蘭部落阿美族木雕藝術家（根據都蘭糖廠轉型藝文聚落口述史改編）",
+            monologue: "「小時候聽阿爸說，糖廠煙囪冒煙的時候，族人都在甘蔗田裡流汗；盟軍飛機丟炸彈的時候，大家全往都蘭山裡跑。\n\n以前這裡是別人管我們的地方，但現在，我們在廢棄的倉庫裡敲打漂流木、唱祖先留下的古調。把傷痕累累的老工廠變成部落的客廳，這就是我們阿美族人跟歷史和解的方式。」",
+            quiz: {
+              question: "「都蘭（Etolan）」這個地名在阿美族語裡面，原本是什麼意思呢？",
+              options: ["(A) 盛產甘蔗的地方", "(B) 石頭很多、砌石為牆的地方", "(C) 海浪很大的地方"],
+              answerIndex: 1,
+              explanation: "答案是 (B) 石頭很多的地方！因為早年阿美族人在這裡開墾時，會把田裡的石頭挖出來堆砌成石牆（tolan），發音久了就變成中文的「都蘭」囉！"
+            },
+            csvCost: "免費 (茶點約 NT$150)"
+          },
+          {
+            time: "11:30",
+            type: "transport",
+            badge: "🚌 台灣好行",
+            badgeColor: "#CBE4D6",
+            route: "都蘭糖廠 → 東河橋與東河包子",
+            subNote: "總時間約 25 分鐘｜欣賞馬武窟溪帝王石與日治吉田橋遺構，午餐吃東河包子",
+            csvTopic: "馬武窟溪出海口地景與進入泰源盆地之交通門戶",
+            csvMaterial: "1930年日治時期興建之「吉田橋」（舊東河橋）工程史料",
+            csvCost: "午餐 NT$150"
+          },
+          {
+            time: "13:45",
+            type: "transport",
+            badge: "🚕 在地包車接駁",
+            badgeColor: "#F7E8C4",
+            route: "東河 → 泰源幽谷",
+            subNote: "總時間約 20 分鐘｜預約計程車深入台 23 線，免去長輩等公車之苦",
+            csvTopic: "由海岸線深入海岸山脈泰源盆地",
+            csvMaterial: "泰源感訓監獄地理環境調查",
+            csvCost: "包車分攤 NT$300"
+          },
+          {
+            time: "14:05",
+            type: "spot",
+            spotId: "spot-4",
+            title: "泰源幽谷（前泰源感訓監獄歷史現場）",
+            subNote: "【雙主題交會】1970 年綠島政治犯與東海岸阿美族青年攜手起義的故事",
+            story: "爸、媽，從東河橋轉進這片被群山包圍的「泰源幽谷」，看起來像世外桃源對不對？但其實在 1960 到 70 年代，深山裡藏著一座專門關押白色恐怖政治犯的「泰源感訓監獄」。1970 年 2 月 8 日，幾位曾經被關在綠島的年輕政治犯（江炳興、鄭金河等人），聯合同情他們的當地阿美族原住民青年與士兵，發動了震驚全台的武裝起義——「泰源事件」。雖然他們逃進東海岸山區後不幸被捕犧牲，但當時部落族人冒著生命危險給他們送飯、藏匿的情誼，成為台灣原住民與人權受難者最動人的交集。",
+            significance: "【雙主題核心交會點】這是我們整趟旅程把「原住民歷史」跟「綠島人權」串起來的最關鍵拼圖！因為發生了這場起義，政府才決定把政治犯全部移送到更嚴密的綠島「綠洲山莊」——也就是我們明天要搭船去的地方。（於登仙橋與泰源村休憩區平視導覽，輕鬆不費力）",
+            materials: ["1970年2月8日泰源事件檔案", "泰源五烈士（江炳興、鄭金河、詹天增、謝東榮、陳良）遺書", "東海岸阿美族青年協助逃亡口述紀錄"],
+            persona: "1970 年參與泰源事件的政治犯江炳興（根據江炳興生平與泰源事件檔案精神改編）",
+            monologue: "「從綠島被移送到泰源的這幾年，看著窗外馬武窟溪的山嵐，我們心裡從來沒有放棄過對自由的渴望。\n\n監獄外的阿美族青年跟我們一樣年輕，他們懂得山林的呼吸，也看懂了我們眼裡的不甘心。如果這場起義注定要失敗，至少在衝出鐵門、奔向東海岸山林的那幾天，我們跟部落的朋友一樣，是真正自由的台灣人。」",
+            quiz: {
+              question: "1970 年「泰源事件」發生後，政府因為擔心本島山區的監獄還是容易跟外界接觸，決定在綠島緊急蓋了哪一座高牆監獄來關押政治犯？",
+              options: ["(A) 綠洲山莊（八卦樓）", "(B) 台北看守所", "(C) 景美看守所"],
+              answerIndex: 0,
+              explanation: "答案是 (A) 綠洲山莊（八卦樓）！這就是為什麼我們今天先來泰源幽谷，明天搭船去綠島看綠洲山莊時，爸媽就能完全看懂這兩座監獄的前因後果了！"
+            },
+            csvCost: "免費"
+          },
+          {
+            time: "16:45",
+            type: "transport",
+            badge: "🚌 台灣好行",
+            badgeColor: "#CBE4D6",
+            route: "返回台東市區／富岡漁港住宿",
+            subNote: "總時間約 50 分鐘｜晚餐後提醒爸媽早點休息，明早搭船前 30 分鐘吃暈船藥",
+            csvTopic: "從本島武裝抵抗過渡到跨海流放綠島的心理準備",
+            csvMaterial: "1950年代原住民菁英高一生、湯守仁、林瑞昌遭誘捕判決背景",
+            csvCost: "晚餐 NT$400 / 住宿 NT$1,800"
+          }
+        ]
+      },
+      {
+        day: 3,
+        dateLabel: "Day 3",
+        areaShort: "跨海綠島",
+        title: "渡海的靈魂：綠島新生訓導處與原民受難者身影",
+        stay: "住：綠島公館／南寮海景民宿",
+        elderTip: "搭船選底層船尾最穩！正午先在南寮吹冷氣吃海草冰午休，下午再逛有冷氣的模型展館。",
+        svgType: "day3",
+        events: [
+          {
+            time: "08:30",
+            type: "spot",
+            spotId: "spot-5",
+            title: "富岡漁港 ➔ 綠島南寮漁港（流麻溝航線）",
+            subNote: "搭乘高速客輪橫渡黑潮（航程 50 分鐘），對照 1951 年政治犯鐵殼船登島歷史航線",
+            story: "我們現在搭著舒適的冷氣客輪，只要 50 分鐘就能從台東富岡漁港抵達綠島。但把時間倒回 1951 年 5 月 17 日，第一批近千名政治犯被塞進悶熱不通風的海軍「鐵殼登陸艇」底部，在海上顛簸了兩天兩夜才抵達綠島。當時沒有南寮漁港的碼頭，他們必須背著沉重的行李涉水上岸，走過島上唯一的水源「流麻溝」，自己去海邊搬硓𥑮石蓋監獄關自己。",
+            significance: "親自搭一趟船橫渡黑潮，就能切身感受當年受難者「一海之隔、與家人音訊斷絕」的孤獨感，也能體會綠島從「流放之島」變成「觀光與人權之島」的時代轉變。（選船艙中後段底層最穩不易晃）",
+            materials: ["1951年5月17日首批政治犯登島史料", "前輩畫家歐陽劍華《政治犯船艙運送圖》", "流麻溝歷史地景"],
+            persona: "1951 年 5 月首批被押解登陸綠島的政治犯前輩陳孟和（根據陳孟和口述歷史改編）",
+            monologue: "「在鐵殼船底悶了兩天兩夜，嘔吐物的酸味混著海水的鹹味，每個人都以為自己撐不到上岸了。\n\n當艙門打開，刺眼的陽光灑下來，我看見前面是一座光禿禿的火山島，老百姓叫它『火燒島』。我們踩過冰涼的流麻溝溪水，官方給我們取了一個新名字叫『新生』——意思是我們過去的人生已經死了，得在這座小島上重新做人。」",
+            quiz: {
+              question: "1950 年代被關押在綠島「新生訓導處」的政治犯，當時在公文與書信中都被統一稱為什麼名字呢？",
+              options: ["(A) 留學生", "(B) 新生", "(C) 墾荒隊"],
+              answerIndex: 1,
+              explanation: "答案是 (B) 新生！當時政府將綠島監獄命名為「新生訓導處」，象徵要對這群知識分子進行思想改造。寄給父母妻兒的家書信封上，也只能寫花蓮郵政信箱代號，連「綠島」兩個字都不能寫出來。"
+            },
+            csvCost: "來回船票 NT$1,120 (敬老半價 NT$560)"
+          },
+          {
+            time: "10:30",
+            type: "food",
+            title: "民宿放行李＋南寮大街午餐與午休",
+            subNote: "避開正午烈日，吹冷氣吃綠島特色海草冰、花生芡粿與鮮魚湯",
+            csvTopic: "認識火燒島海洋地理與早期島民種番薯、捕魚生活",
+            csvMaterial: "日治時期「火燒島浮浪者收容所」史料",
+            csvCost: "NT$350"
+          },
+          {
+            time: "13:15",
+            type: "transport",
+            badge: "🚌 綠島環島公車/包車",
+            badgeColor: "#BDE0FE",
+            route: "南寮 → 白色恐怖綠島紀念園區",
+            subNote: "總時間約 15 分鐘｜舒適接駁直達展館門口，免曬太陽",
+            csvTopic: "重返流麻溝與新生訓導處園區動線",
+            csvMaterial: "綠島人權文化園區空間配置圖",
+            csvCost: "島上接駁分攤 NT$300"
+          },
+          {
+            time: "13:30",
+            type: "spot",
+            spotId: "spot-6",
+            title: "綠島新生訓導處（原民受難者與難友的生命力）",
+            subNote: "【雙主題核心人物】追尋泰雅族青年林昭明關押綠島 15 年與鄒族高一生家書的記憶",
+            story: "走進新生訓導處的展示館，你會看到栩栩如生的蠟像與全區模型——這就是當年政治犯過大通舖、上政治課、去海邊打石頭與種菜的日常。你可能很難想像，在白色恐怖時期，連深山裡的原住民菁英也沒有倖免！泰雅族第一代知識分子林瑞昌（Losi Watan）與阿里山鄒族領袖高一生、湯守仁，因為爭取原住民族自治與土地權益被捕槍決；而林瑞昌年僅二十出頭的姪子「林昭明」（泰雅族），更被送到我們現在站著的綠島新生訓導處，整整關押了十五年！",
+            significance: "【雙主題核心人物線】在這裡我們不看冰冷的法條，而是看這群年輕人有多堅強！原住民青年林昭明在島上靠著信仰與音樂撐過苦役；攝影師陳孟和用廢棄零件自己組裝放大機，幫難友跟綠島鄉親洗照片寄回家報平安；舞蹈家蔡瑞月則在碉堡屋頂教大家跳舞。（展館有冷氣、座椅與無障礙廁所）",
+            materials: ["泰雅族受難者林昭明（Watan Tanga）綠島關押口述史", "鄒族高一生獄中最後家書與《春之佐保姬》", "陳孟和自製暗房與攝影史料", "蔡瑞月綠島編舞紀錄"],
+            persona: "泰雅族受難者林昭明與鄒族高一生之跨時空心聲（根據高一生 1954 年致妻真實家書「水田不要賣」及林昭明口述史改編）",
+            monologue: "「（高一生家書）親愛的春芳：我非常想念妳和孩子們。即使我不在家，妳也要堅強地活下去，家裡的水田千萬不要賣掉，因為那是我們在山上賴以維生的根……\n\n（林昭明綠島視角）叔父林瑞昌與高一生前輩在台北走了，而我被留在了火燒島。每天推著沉重的石頭車經過海邊時，我總會閉上眼睛，在海風裡哼起山上的旋律。只要心裡的歌還沒停，泰雅族的靈魂就不會被圍牆困住。」",
+            quiz: {
+              question: "阿里山鄒族領袖高一生在獄中寫給妻子春芳的最後一封日文家書裡，特別叮囑妻子「家裡的哪一樣東西千萬不要賣掉」？",
+              options: ["(A) 鋼琴", "(B) 水田（土地）", "(C) 獵槍"],
+              answerIndex: 1,
+              explanation: "答案是 (B) 水田（土地）！高一生在信中寫道：「水田不要賣！」對原住民族與老一輩台灣人來說，土地就是家人活下去的根本。這封信讓我們看見受難者在生命最後一刻，心裡最牽掛的永遠是家人的溫飽。"
+            },
+            csvCost: "免費參觀"
+          },
+          {
+            time: "15:45",
+            type: "spot",
+            spotId: "spot-7",
+            title: "綠洲山莊（高牆內的八卦樓與島民溫情）",
+            subNote: "見證泰源事件後興建的封閉監獄，聆聽台大名醫政治犯為綠島居民義診的感人故事",
+            story: "爸、媽，我們從開放式的「新生訓導處」走過來，眼前這座高牆圍繞、中間像八卦一樣往四面八方延伸的建築，就是 1972 年完工的「綠洲山莊」。還記得昨天我們在台東東海岸聊到的「1970 年泰源事件」嗎？因為那場政治犯與原住民青年的起義嚇壞了當局，政府決定蓋這座全封閉式的八卦樓，把政治犯集中鎖進小牢房裡。不過，高牆雖然冷酷，牆外的綠島居民卻非常善良——當年政治犯裡有全台最頂尖的台大醫生（如胡鑫麟、蘇友鵬），綠島鄉親生病難產都是靠這群「政治犯醫生」救活的！",
+            significance: "站在八卦樓中央，一眼就能看懂監獄設計怎麼「一人看管四條走廊」；同時聽聽政治犯醫生跟綠島阿公阿嬤互相照顧的故事，感受高牆擋不住的台灣人情味。",
+            materials: ["1972年國防部綠洲山莊興建檔案", "前台大醫院眼科主任胡鑫麟與蘇友鵬醫師綠島義診口述史", "柏楊、施明德關押紀錄"],
+            persona: "1950–60 年代受過政治犯醫師診治的綠島公館村老居民（根據綠島鄉親口述歷史改編）",
+            monologue: "「以前我們綠島沒有大醫院，遇到颱風天船不能開，孕婦難產或是小孩發高燒，真的只能求媽祖保佑。\n\n後來新生訓導處來了好多讀書人，裡面居然有台大醫院的大國手！那時候不管半夜風雨多大，只要我們村民去敲營區的門，胡醫生、蘇醫生就會背著藥箱出來救命。上頭說他們是壞人，但我們綠島人一輩子都記得，他們是救活我們孩子的恩人。」",
+            quiz: {
+              question: "知名小提琴家胡乃元的父親「胡鑫麟醫師」，當年被關在綠島時是哪一科的權威名醫，替無數綠島鄉親治好了因為海風與烈日造成的眼疾？",
+              options: ["(A) 牙科", "(B) 眼科", "(C) 骨科"],
+              answerIndex: 1,
+              explanation: "答案是 (B) 眼科！胡鑫麟醫師曾任台大醫院眼科主任，當年綠島居民長期吹海風、曬太陽又有砂眼，胡醫師在島上治好了許多差點失明的長輩，至今仍讓綠島老一輩感念不已。"
+            },
+            csvCost: "免費參觀"
+          },
+          {
+            time: "18:00",
+            type: "food",
+            title: "公館村晚餐與聽海看星空",
+            subNote: "享用少油少鹽在地合菜，飯後在民宿庭院吹海風看滿天星斗",
+            csvTopic: "體會政治犯與綠島居民共用流麻溝水源的互助記憶",
+            csvMaterial: "綠島公館村地方口述史",
+            csvCost: "晚餐 NT$400 / 住宿 NT$2,000"
+          }
+        ]
+      },
+      {
+        day: 4,
+        dateLabel: "Day 4",
+        areaShort: "溫柔賦歸",
+        title: "傷痕的撫平與重生：垂淚碑、燕子洞與溫柔賦歸",
+        stay: "平安返家（車上享用池上便當）",
+        elderTip: "燕子洞碎石路較難走，我們在十三中隊外圍觀海平台遠眺並聽語音導覽，保護爸媽膝蓋。",
+        svgType: "day4",
+        events: [
+          {
+            time: "08:30",
+            type: "spot",
+            spotId: "spot-8",
+            title: "人權紀念碑（垂淚碑）➔ 十三中隊與燕子洞遠眺",
+            subNote: "讀柏楊筆下天下父母心的碑文，在蔚藍太平洋前感受自由與家庭平安的珍貴",
+            story: "在離開綠島前的最後一個早上，我們來到海邊的「人權紀念碑」與遠眺「十三中隊、燕子洞」。所謂的「十三中隊」，其實不是活人住的隊伍，而是當年不幸在綠島病逝或沒辦法回家的難友墓園（因為新生訓導處只有十二個中隊，過世的人就被難友溫柔地稱為第十三中隊）。而海邊的「垂淚碑」上，刻著作家柏楊寫的一句話，每次讀到這句話，都會讓人想起天下父母心。",
+            significance: "這趟四天三夜的旅行，我們從台東的千年石板棺、東海岸部落的抗爭，一路走到綠島的圍牆裡。最後站在這片蔚藍的太平洋前，想跟爸媽一起感受這份得來不易的平安——能夠一家人平平安安地一起搭火車、坐船看海，就是歷史留給我們最珍貴的禮物。（燕子洞於平台遠眺聽語音導覽，保護爸媽膝蓋）",
+            materials: ["1999年綠島人權紀念碑（柏楊碑文）", "十三中隊歐陽劍華與張常美夫婦重返祭拜史料", "燕子洞話劇排演與歷史遺址"],
+            persona: "曾關押於綠島的作家柏楊與受難者母親的心聲（引用綠島人權紀念碑柏楊碑文並結合家屬口述史）",
+            monologue: "「『在那個時代，有多少母親，為她們囚禁在這個島上的孩子，長夜哭泣。』\n\n——當年多少阿母在台灣的港口望著大海，不知道自己的孩子在火燒島吃得飽不飽、穿得暖不暖。今天，海浪一樣拍打著礁岩，但哭泣的長夜已經過去了。願這座島嶼吹出去的每一陣海風，都能溫柔地擁抱每一個曾經流淚的家庭。」",
+            quiz: {
+              question: "在綠島新生訓導處的編制只有一到十二中隊，那麼難友們口中的「第十三中隊」指的是什麼呢？",
+              options: ["(A) 負責煮飯的伙房班", "(B) 綠島在地駐軍", "(C) 留在島上長眠的難友公墓"],
+              answerIndex: 2,
+              explanation: "答案是 (C) 留在島上長眠的難友公墓！活下來的難友們沒有忘記沒能回家的夥伴，把他們編入永遠的「第十三中隊」，並在民主化後年年回到綠島為他們獻花。"
+            },
+            csvCost: "免費參觀"
+          },
+          {
+            time: "10:45",
+            type: "food",
+            title: "綠島燈塔與烏油窟看海＋採買伴手禮",
+            subNote: "了解 1937 年綠島居民救援美國胡佛總統號郵輪獲贈燈塔的溫暖故事，於南寮買海草麻糬、飛魚鬆",
+            csvTopic: "1937年胡佛總統號觸礁事件與綠島燈塔國際人道救援史",
+            csvMaterial: "1938年美國紅十字會捐建綠島燈塔歷史檔案",
+            csvCost: "伴手禮與午餐 NT$650"
+          },
+          {
+            time: "14:00",
+            type: "transport",
+            badge: "⛴️ 綠島客輪",
+            badgeColor: "#CBE4D6",
+            route: "綠島南寮漁港 → 台東富岡漁港",
+            subNote: "總時間約 50 分鐘｜搭船前 1 小時勿吃太飽，下船後搭預約計程車直達台東火車站",
+            csvTopic: "平安橫渡黑潮返回台灣本島，對照受難者出獄復歸社會歷程",
+            csvMaterial: "受難者出獄口述紀錄",
+            csvCost: "計程車分攤 NT$100"
+          },
+          {
+            time: "16:15",
+            type: "transport",
+            badge: "🚂 台鐵新自強號",
+            badgeColor: "#CBE4D6",
+            route: "台東火車站 → 台北車站",
+            subNote: "總時間約 4.2 小時｜在火車上享用熱騰騰的池上/台東鐵路便當，翻看四天合照溫馨賦歸",
+            csvTopic: "完成四天三夜山海與人權深度孝親之旅",
+            csvMaterial: "無",
+            csvCost: "車票 NT$783 (敬老 NT$392) + 便當 NT$100"
+          }
+        ]
+      }
+    ];
+
+    // 打包檢查清單資料
+    const CHECKLIST_DATA = [
+      { id: "chk-1", title: "身分證＆敬老卡（滿65歲必備）", desc: "搭台鐵、買綠島船票與進入卑南遺址皆享半價優惠", checked: true },
+      { id: "chk-2", title: "個人常備藥＆防暈船藥/貼片", desc: "開船前 30 分鐘於富岡漁港候船室溫水服用", checked: false },
+      { id: "chk-3", title: "防風薄外套＆遮陽帽", desc: "東海岸海風與綠島客輪冷氣較強，隨時穿脫防著涼", checked: false },
+      { id: "chk-4", title: "好穿防滑的氣墊健走鞋", desc: "漫步卑南遺址草地、都蘭糖廠與綠島園區最省力", checked: false },
+      { id: "chk-5", title: "輕量保溫瓶", desc: "台鐵車廂與綠島人權園區展館皆有免費溫熱飲水機", checked: false },
+      { id: "chk-6", title: "太陽眼鏡＆防曬乳", desc: "綠島烏油窟與垂淚碑海邊陽光充足，保護爸媽眼睛", checked: false },
+      { id: "chk-7", title: "把本互動導覽網頁加入手機桌面", desc: "字體可隨時放大，還有語音朗讀家書功能免看小字", checked: false }
+    ];
+
+    // 5 位核心歷史人物小圖鑑資料
+    const FIGURES_DATA = [
+      {
+        name: "林昭明 (Watan Tanga)",
+        tag: "泰雅族・綠島新生訓導處受難者",
+        summary: "泰雅族第一代知識分子林瑞昌（Losi Watan）之侄。1950 年代因原住民族自治案受牽連，年僅二十餘歲即被關押於綠島新生訓導處長達 15 年。在島上依靠音樂與堅定信仰度過打石苦役，是原住民族與綠島人權史最直接的生命交集。"
+      },
+      {
+        name: "高一生 (吾雍・雅達烏猶卡那)",
+        tag: "鄒族領袖・音樂家与教育家",
+        summary: "日治時期台南師範畢業的鄒族菁英，致力於部落現代化與高山自治。1952 年遭誘捕入獄，在獄中譜寫《春之佐保姬》寄託對妻子與山林的思念，臨刑前寫下「水田不要賣」的催淚家書。"
+      },
+      {
+        name: "江炳興與東海岸阿美族青年",
+        tag: "1970 年「泰源事件」起義者",
+        summary: "江炳興、鄭金河等政治犯曾被關押於綠島，後移監台東東河「泰源感訓監獄」。1970 年他們聯合當地同情政治犯的阿美族原住民青年發動武裝起義，展現跨越族群對自由的共同渴望，也促成後來綠島「綠洲山莊」的興建。"
+      },
+      {
+        name: "陳孟和",
+        tag: "綠島新生訓導處・攝影師前輩",
+        summary: "1951 年首批登陸綠島的政治犯之一。在物資極度匱乏的新生訓導處，他利用廢棄木箱與零件自製暗房放大機，為難友與綠島在地鄉親拍下珍貴照片寄回家報平安，並於晚年主持重建綠島新生訓導處歷史模型。"
+      },
+      {
+        name: "胡鑫麟 醫師",
+        tag: "前台大眼科主任・綠島仁醫",
+        summary: "國際知名小提琴家胡乃元之父。被關押於綠島期間，因島上醫療極度落後、居民普遍患有砂眼與眼疾，胡醫師與蘇友鵬等難友醫官不分晝夜為綠島鄉親看診動手術，被綠島長輩感念為「救命恩人」。"
+      }
+    ];
+
+    // =========================================================================
+    // 2. 狀態管理與初始化
+    // =========================================================================
+    let currentDayIndex = 0;
+    let currentMainTab = 'itinerary';
+    let currentFareMode = 'regular'; // 'regular' | 'senior'
+    let activeSpotData = null;
+    let isLargeText = false;
+    let isSpeaking = false;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      selectDay(0);
+      renderFareTable();
+      renderChecklist();
+      renderFigures();
+    });
+
+    // =========================================================================
+    // 3. 主分頁切換 (行程 / 船班交通 / 準備)
+    // =========================================================================
+    function switchMainTab(tabName) {
+      stopSpeech();
+      currentMainTab = tabName;
+      const tabs = ['transport', 'itinerary', 'prep'];
+      tabs.forEach(t => {
+        const viewEl = document.getElementById(`view-${t}`);
+        const btnEl = document.getElementById(`tabBtn-${t}`);
+        if (t === tabName) {
+          viewEl.classList.remove('hidden');
+          btnEl.className = "px-4 py-1.5 rounded-full font-black scale-text-sm transition-all bg-[#E8998D] border-[2.5px] border-[#2C2A29] shadow-[0_2px_0_#2C2A29]";
+        } else {
+          viewEl.classList.add('hidden');
+          btnEl.className = "px-3 py-1.5 rounded-full font-bold scale-text-sm transition-all text-[#2C2A29] hover:bg-[#EFECE4]";
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // =========================================================================
+    // 4. 水平日期切換與當日時間軸渲染
+    // =========================================================================
+    function getDayIllustrationSVG(svgType) {
+      if (svgType === 'day1') {
+        // 台東市區：月形石柱與山海日出
+        return `
+          <svg class="w-16 h-16 shrink-0" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="66" height="66" rx="14" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+            <circle cx="52" cy="20" r="7" fill="#E8998D" stroke="#2C2A29" stroke-width="2"/>
+            <path d="M6 48L22 28L38 48H6Z" fill="#CBE4D6" stroke="#2C2A29" stroke-width="2.2" stroke-linejoin="round"/>
+            <rect x="42" y="25" width="12" height="25" rx="2" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2.2"/>
+            <circle cx="48" cy="33" r="2.5" fill="#FAF7F2" stroke="#2C2A29" stroke-width="1.8"/>
+            <path d="M5 55C15 52 25 58 36 55C47 52 57 58 67 55" stroke="#2C2A29" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>`;
+      } else if (svgType === 'day2') {
+        // 東海岸：東河拱橋與泰源山谷
+        return `
+          <svg class="w-16 h-16 shrink-0" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="66" height="66" rx="14" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+            <path d="M8 46L26 22L44 46L56 30L66 46" fill="#E2ECE4" stroke="#2C2A29" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M10 48H62" stroke="#2C2A29" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M16 48C22 34 50 34 56 48" stroke="#E8998D" stroke-width="3.2" stroke-linecap="round"/>
+            <rect x="6" y="51" width="60" height="15" rx="4" fill="#BDE0FE" stroke="#2C2A29" stroke-width="2"/>
+          </svg>`;
+      } else if (svgType === 'day3') {
+        // 跨海綠島：客輪與火燒島
+        return `
+          <svg class="w-16 h-16 shrink-0" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="66" height="66" rx="14" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+            <circle cx="20" cy="18" r="5" fill="#F7E8C4" stroke="#2C2A29" stroke-width="2"/>
+            <path d="M22 34H50L45 46H17L22 34Z" fill="#E8998D" stroke="#2C2A29" stroke-width="2.2" stroke-linejoin="round"/>
+            <rect x="27" y="25" width="16" height="9" rx="2" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.2"/>
+            <rect x="4" y="48" width="64" height="20" rx="8" fill="#BDE0FE" stroke="#2C2A29" stroke-width="2.2"/>
+            <path d="M14 57C22 54 30 60 38 57C46 54 54 60 60 57" stroke="#2C2A29" stroke-width="2" stroke-linecap="round"/>
+          </svg>`;
+      } else {
+        // Day 4：綠島純白燈塔與和平海浪
+        return `
+          <svg class="w-16 h-16 shrink-0" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="66" height="66" rx="14" fill="#FAF7F2" stroke="#2C2A29" stroke-width="2.5"/>
+            <path d="M31 20H41L44 48H28L31 20Z" fill="#FFFFFF" stroke="#2C2A29" stroke-width="2.2" stroke-linejoin="round"/>
+            <rect x="32" y="13" width="8" height="7" rx="2" fill="#E8998D" stroke="#2C2A29" stroke-width="2"/>
+            <path d="M44 16L55 12M44 19L55 22" stroke="#F7E8C4" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="5" y="48" width="62" height="19" rx="8" fill="#BDE0FE" stroke="#2C2A29" stroke-width="2.2"/>
+          </svg>`;
+      }
+    }
+
+    function selectDay(dayIndex) {
+      currentDayIndex = dayIndex;
+      const dayData = ITINERARY_DATA[dayIndex];
+
+      // 1. 移動水平軸上的小纜車/小船圖示與更新膠囊樣式
+      const leftPercentages = ["12.5%", "37.5%", "62.5%", "87.5%"];
+      const mascot = document.getElementById('stepperMascot');
+      if (mascot) mascot.style.left = leftPercentages[dayIndex];
+
+      for (let i = 0; i < 4; i++) {
+        const labelEl = document.getElementById(`stepLabel-${i}`);
+        const dotEl = document.getElementById(`stepDot-${i}`);
+        if (i === dayIndex) {
+          labelEl.className = "px-2.5 py-0.5 rounded-full font-black scale-text-sm bg-[#E8998D] text-[#2C2A29] border-2 border-[#2C2A29] transition-all";
+          dotEl.className = "w-5 h-5 rounded-full bg-[#E8998D] border-[3px] border-[#2C2A29] transition-transform scale-110";
+        } else {
+          labelEl.className = "px-2.5 py-0.5 rounded-full font-bold scale-text-sm text-[#2C2A29] transition-all";
+          dotEl.className = "w-5 h-5 rounded-full bg-[#FAF7F2] border-[3px] border-[#2C2A29] transition-transform";
+        }
+      }
+
+      // 2. 渲染當日主題摘要卡 (Day Summary Card)
+      const summaryCard = document.getElementById('daySummaryCard');
+      summaryCard.innerHTML = `
+        ${getDayIllustrationSVG(dayData.svgType)}
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 mb-0.5">
+            <span class="scale-text-xs font-black text-[#5C7A67] tracking-wide">${dayData.dateLabel}｜${dayData.areaShort}</span>
+          </div>
+          <h2 class="scale-text-base font-black text-[#2C2A29] leading-snug mb-1">
+            ${dayData.title}
+          </h2>
+          <p class="scale-text-xs font-bold text-[#4A4745] mb-1">
+            🏠 ${dayData.stay}
+          </p>
+          <p class="scale-text-xs text-[#5A5652] bg-white/75 px-2.5 py-1 rounded-lg border border-[#2C2A29]/40">
+            👵 體力叮嚀：${dayData.elderTip}
+          </p>
+        </div>
+      `;
+
+      // 3. 渲染垂直虛線時間軸節點 (Vertical Timeline)
+      const timelineList = document.getElementById('timelineList');
+      timelineList.innerHTML = dayData.events.map((ev) => {
+        if (ev.type === 'transport') {
+          // 交通節點：不放白框卡片，採用粗框膠囊標籤 + 起訖站 + 灰色小字提醒
+          return `
+            <div class="flex items-start gap-3 py-1">
+              <div class="w-[54px] text-right pt-1 shrink-0">
+                <span class="scale-text-xs font-bold text-[#2C2A29] font-mono">${ev.time}</span>
+              </div>
+              <div class="timeline-dot mt-1.5"></div>
+              <div class="flex-1 pl-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="sketch-pill px-2.5 py-0.5 scale-text-xs font-black text-[#2C2A29]" style="background-color: ${ev.badgeColor};">
+                    ${ev.badge}
+                  </span>
+                  <span class="scale-text-sm font-black text-[#2C2A29]">${ev.route}</span>
+                </div>
+                <p class="scale-text-xs text-[#6E6A66] font-medium mt-1 pl-0.5">
+                  ${ev.subNote}
+                </p>
+              </div>
+            </div>
+          `;
+        } else if (ev.type === 'food') {
+          // 一般餐飲/休息節點：白底粗黑框圓角長條卡片 + 淺藍色底線
+          return `
+            <div class="flex items-start gap-3">
+              <div class="w-[54px] text-right pt-3.5 shrink-0">
+                <span class="scale-text-xs font-bold text-[#2C2A29] font-mono">${ev.time}</span>
+              </div>
+              <div class="timeline-dot mt-4"></div>
+              <div class="flex-1 sketch-box bg-white p-3.5">
+                <h3 class="scale-text-base font-black text-[#2C2A29] mb-1">
+                  <span class="underline-blue">${ev.title}</span>
+                </h3>
+                <p class="scale-text-xs text-[#5A5652] font-medium">
+                  🍴 ${ev.subNote}
+                </p>
+              </div>
+            </div>
+          `;
+        } else {
+          // 核心歷史景點節點 (共 8 個)：可點擊彈出雙模式歷史導覽視窗
+          return `
+            <div class="flex items-start gap-3">
+              <div class="w-[54px] text-right pt-3.5 shrink-0">
+                <span class="scale-text-xs font-black text-[#2C2A29] font-mono">${ev.time}</span>
+              </div>
+              <div class="timeline-dot timeline-dot-active mt-4"></div>
+              <button onclick="openStoryModal('${ev.spotId}')" class="flex-1 text-left sketch-box sketch-box-interactive bg-white p-3.5 group focus:outline-none">
+                <div class="flex items-start justify-between gap-2 mb-1.5">
+                  <h3 class="scale-text-base font-black text-[#2C2A29] group-hover:text-[#B84A39] transition-colors">
+                    <span class="underline-coral">${ev.title}</span>
+                  </h3>
+                  <span class="sketch-pill bg-[#F7E8C4] px-2.5 py-0.5 scale-text-xs font-black text-[#2C2A29] shrink-0 flex items-center gap-1">
+                    📖 點擊讀故事
+                  </span>
+                </div>
+                <p class="scale-text-xs text-[#4A4745] font-medium mb-2">
+                  ${ev.subNote}
+                </p>
+                <div class="flex flex-wrap items-center gap-1.5 pt-1 border-t border-dashed border-[#2C2A29]/25">
+                  <span class="scale-text-xs font-bold text-[#5C7A67]">🎧 內含第一人稱家書語音 ＆ 親子互動問答 ➔</span>
+                </div>
+              </button>
+            </div>
+          `;
+        }
+      }).join('');
+    }
+
+    // =========================================================================
+    // 5. 雙模式歷史互動視窗 (Modal) 與 Web Speech API 語音導覽
+    // =========================================================================
+    function findSpotById(spotId) {
+      for (const day of ITINERARY_DATA) {
+        for (const ev of day.events) {
+          if (ev.spotId === spotId) {
+            return { spot: ev, dayLabel: day.dateLabel, areaShort: day.areaShort };
+          }
+        }
+      }
+      return null;
+    }
+
+    function openStoryModal(spotId) {
+      stopSpeech();
+      const found = findSpotById(spotId);
+      if (!found) return;
+      activeSpotData = found.spot;
+
+      document.getElementById('modalDayBadge').textContent = `${found.dayLabel}・${found.areaShort}歷史現場`;
+      document.getElementById('modalSpotTitle').textContent = activeSpotData.title;
+      document.getElementById('modalStoryText').textContent = activeSpotData.story;
+      document.getElementById('modalSignificanceText').textContent = activeSpotData.significance;
+
+      // 介入史料標籤
+      const tagsContainer = document.getElementById('modalMaterialsTags');
+      tagsContainer.innerHTML = activeSpotData.materials.map(m => `
+        <span class="px-2.5 py-1 rounded-lg bg-[#F7E8C4] border-[1.8px] border-[#2C2A29] scale-text-xs font-bold text-[#2C2A29]">
+          #${m}
+        </span>
+      `).join('');
+
+      // 第一人稱家書／獨白
+      document.getElementById('modalPersonaTitle').textContent = activeSpotData.persona;
+      document.getElementById('modalMonologueText').textContent = activeSpotData.monologue;
+
+      // 互動小問答渲染
+      document.getElementById('modalQuizQuestion').textContent = activeSpotData.quiz.question;
+      const explainBox = document.getElementById('modalQuizExplanation');
+      explainBox.classList.add('hidden');
+
+      const optionsBox = document.getElementById('modalQuizOptions');
+      optionsBox.innerHTML = activeSpotData.quiz.options.map((optText, idx) => `
+        <button id="quizOpt-${idx}" onclick="checkQuizAnswer(${idx})" class="w-full text-left px-3.5 py-2.5 rounded-xl border-2 border-[#2C2A29] bg-white hover:bg-[#FAF7F2] font-bold scale-text-xs text-[#2C2A29] transition-all flex items-center justify-between">
+          <span>${optText}</span>
+          <span id="quizIcon-${idx}" class="font-black"></span>
+        </button>
+      `).join('');
+
+      // 預設顯示 Tab 1
+      switchModalTab('story');
+
+      // 顯示彈窗
+      const backdrop = document.getElementById('storyModalBackdrop');
+      backdrop.classList.remove('hidden');
+      document.getElementById('modalScrollBody').scrollTop = 0;
+    }
+
+    function switchModalTab(tab) {
+      stopSpeech();
+      const storyBtn = document.getElementById('modalTabBtn-story');
+      const letterBtn = document.getElementById('modalTabBtn-letter');
+      const storyContent = document.getElementById('modalContent-story');
+      const letterContent = document.getElementById('modalContent-letter');
+
+      if (tab === 'story') {
+        storyContent.classList.remove('hidden');
+        letterContent.classList.add('hidden');
+        storyBtn.className = "py-2 px-2 rounded-xl font-black scale-text-xs border-[2.5px] border-[#2C2A29] bg-[#E8998D] shadow-[0_2px_0_#2C2A29] transition-all flex items-center justify-center gap-1";
+        letterBtn.className = "py-2 px-2 rounded-xl font-bold scale-text-xs border-[2.5px] border-[#2C2A29] bg-white text-[#2C2A29] transition-all flex items-center justify-center gap-1";
+      } else {
+        storyContent.classList.add('hidden');
+        letterContent.classList.remove('hidden');
+        letterBtn.className = "py-2 px-2 rounded-xl font-black scale-text-xs border-[2.5px] border-[#2C2A29] bg-[#E8998D] shadow-[0_2px_0_#2C2A29] transition-all flex items-center justify-center gap-1";
+        storyBtn.className = "py-2 px-2 rounded-xl font-bold scale-text-xs border-[2.5px] border-[#2C2A29] bg-white text-[#2C2A29] transition-all flex items-center justify-center gap-1";
+      }
+    }
+
+    function checkQuizAnswer(selectedIndex) {
+      if (!activeSpotData) return;
+      const correctIndex = activeSpotData.quiz.answerIndex;
+
+      activeSpotData.quiz.options.forEach((_, idx) => {
+        const btn = document.getElementById(`quizOpt-${idx}`);
+        const icon = document.getElementById(`quizIcon-${idx}`);
+        if (idx === correctIndex) {
+          btn.className = "w-full text-left px-3.5 py-2.5 rounded-xl border-2 border-[#2C2A29] bg-[#CBE4D6] font-black scale-text-xs text-[#2C2A29] flex items-center justify-between";
+          icon.textContent = "⭕ 正解";
+        } else if (idx === selectedIndex && selectedIndex !== correctIndex) {
+          btn.className = "w-full text-left px-3.5 py-2.5 rounded-xl border-2 border-[#2C2A29] bg-[#F6C6BD] font-bold scale-text-xs text-[#2C2A29] flex items-center justify-between";
+          icon.textContent = "💭 再想想";
+        } else {
+          btn.className = "w-full text-left px-3.5 py-2.5 rounded-xl border-2 border-[#2C2A29] bg-white/60 font-medium scale-text-xs text-[#6E6A66] flex items-center justify-between";
+          icon.textContent = "";
+        }
+      });
+
+      const explainBox = document.getElementById('modalQuizExplanation');
+      const resultBadge = document.getElementById('modalQuizResultBadge');
+      const explainText = document.getElementById('modalQuizExplanationText');
+
+      explainBox.classList.remove('hidden');
+      if (selectedIndex === correctIndex) {
+        explainBox.className = "mt-3 p-3 rounded-xl border-2 border-[#2C2A29] bg-[#E2ECE4]";
+        resultBadge.textContent = "🎉 答對了！爸媽太厲害了！";
+      } else {
+        explainBox.className = "mt-3 p-3 rounded-xl border-2 border-[#2C2A29] bg-[#F7E8C4]";
+        resultBadge.textContent = "💡 原來背後的歷史是這樣的：";
+      }
+      explainText.textContent = activeSpotData.quiz.explanation;
+    }
+
+    function closeStoryModal() {
+      stopSpeech();
+      document.getElementById('storyModalBackdrop').classList.add('hidden');
+    }
+
+    function handleBackdropClick(event) {
+      if (event.target.id === 'storyModalBackdrop') {
+        closeStoryModal();
+      }
+    }
+
+    // Web Speech API 語音朗讀功能（專為長輩調整 0.9 溫和語速）
+    function toggleSpeech() {
+      if (!('speechSynthesis' in window)) {
+        showToast("您的瀏覽器不支援語音朗讀功能");
+        return;
+      }
+
+      if (isSpeaking) {
+        stopSpeech();
+        return;
+      }
+
+      if (!activeSpotData) return;
+      window.speechSynthesis.cancel();
+
+      const textToRead = `${activeSpotData.persona}。${activeSpotData.monologue.replace(/[「」『』（）]/g, '')}`;
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      utterance.lang = 'zh-TW';
+      utterance.rate = 0.9; // 放慢語速適合父母聆聽
+      utterance.pitch = 1.0;
+
+      utterance.onstart = () => {
+        isSpeaking = true;
+        updateSpeechUI(true);
+      };
+
+      utterance.onend = () => {
+        isSpeaking = false;
+        updateSpeechUI(false);
+      };
+
+      utterance.onerror = () => {
+        isSpeaking = false;
+        updateSpeechUI(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      isSpeaking = false;
+      updateSpeechUI(false);
+    }
+
+    function updateSpeechUI(speaking) {
+      const btn = document.getElementById('ttsPlayBtn');
+      const icon = document.getElementById('ttsBtnIcon');
+      const text = document.getElementById('ttsBtnText');
+      const status = document.getElementById('speechStatusText');
+      if (!btn) return;
+
+      if (speaking) {
+        btn.className = "sketch-pill bg-[#CBE4D6] px-3.5 py-2 font-black scale-text-xs text-[#2C2A29] flex items-center gap-1.5 shrink-0 speaking-pulse";
+        icon.textContent = "⏹️";
+        text.textContent = "停止朗讀";
+        status.textContent = "正在為爸媽溫柔朗讀歷史家書中⋯⋯";
+      } else {
+        btn.className = "sketch-pill bg-[#E8998D] px-3.5 py-2 font-black scale-text-xs text-[#2C2A29] flex items-center gap-1.5 shrink-0";
+        icon.textContent = "🔊";
+        text.textContent = "播放語音";
+        status.textContent = "點擊右側按鈕，用溫和語速朗讀給爸媽聽";
+      }
+    }
+
+    // =========================================================================
+    // 6. 交通與預估花費試算器（一般全票 vs 65歲敬老半價）
+    // =========================================================================
+    function toggleFareMode(mode) {
+      currentFareMode = mode;
+      const regBtn = document.getElementById('priceBtn-regular');
+      const senBtn = document.getElementById('priceBtn-senior');
+
+      if (mode === 'regular') {
+        regBtn.className = "px-3 py-1 rounded-full scale-text-xs font-black bg-[#E8998D] text-[#2C2A29] transition-all";
+        senBtn.className = "px-3 py-1 rounded-full scale-text-xs font-bold text-[#2C2A29] transition-all";
+      } else {
+        senBtn.className = "px-3 py-1 rounded-full scale-text-xs font-black bg-[#E8998D] text-[#2C2A29] transition-all";
+        regBtn.className = "px-3 py-1 rounded-full scale-text-xs font-bold text-[#2C2A29] transition-all";
+      }
+      renderFareTable();
+    }
+
+    function renderFareTable() {
+      const isSenior = currentFareMode === 'senior';
+      const items = [
+        { name: "🚂 台鐵台北⇄台東來回（新自強號）", cost: isSenior ? 784 : 1566, note: isSenior ? "敬老半價 NT$392 × 2" : "全票 NT$783 × 2" },
+        { name: "⛴️ 富岡⇄綠島來回客輪船票", cost: isSenior ? 560 : 1120, note: isSenior ? "滿65歲敬老半價票" : "一般成人來回全票" },
+        { name: "🚌 台灣好行＋包車接駁＋綠島交通分攤", cost: isSenior ? 874 : 1024, note: "含泰源幽谷與綠島園區接駁" },
+        { name: "🏛️ 園區門票（卑南遺址＋綠島人權園區）", cost: isSenior ? 15 : 30, note: "綠島白色恐怖紀念園區免門票" },
+        { name: "🏨 3 晚雙人房住宿分攤（台東2晚＋綠島1晚）", cost: 5600, note: "嚴選一樓或有電梯之舒適旅宿" },
+        { name: "🍲 4 日特色餐飲、紅烏龍茶點與伴手禮", cost: 2820, note: "含原民風味餐、海草冰、鐵路便當" }
+      ];
+
+      const total = items.reduce((acc, cur) => acc + cur.cost, 0);
+      const container = document.getElementById('fareTableContainer');
+      container.innerHTML = `
+        <div class="divide-y divide-dashed divide-[#2C2A29]/30">
+          ${items.map(item => `
+            <div class="py-2 flex items-center justify-between gap-2">
+              <div>
+                <p class="font-bold scale-text-xs text-[#2C2A29]">${item.name}</p>
+                <p class="scale-text-xs text-[#6E6A66]">${item.note}</p>
+              </div>
+              <span class="font-black scale-text-sm text-[#2C2A29] shrink-0">NT$ ${item.cost.toLocaleString()}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="mt-3 pt-3 border-t-2 border-[#2C2A29] flex items-center justify-between bg-[#F7E8C4] px-3 py-2.5 rounded-xl">
+          <div>
+            <span class="font-black scale-text-sm text-[#2C2A29]">4天3夜 每人預估總計</span>
+            <p class="scale-text-xs text-[#5A5652]">${isSenior ? "✨ 已套用 65 歲以上長輩敬老優惠（省下 NT$1,507）" : "可切換右上角按鈕查看爸媽敬老票優惠價"}</p>
+          </div>
+          <span class="font-black scale-text-lg text-[#B84A39]">NT$ ${total.toLocaleString()}</span>
+        </div>
+      `;
+    }
+
+    // =========================================================================
+    // 7. 行前打包 Checklist 與 5 位歷史人物圖鑑渲染
+    // =========================================================================
+    function renderChecklist() {
+      const container = document.getElementById('checklistItems');
+      const doneCount = CHECKLIST_DATA.filter(i => i.checked).length;
+      const totalCount = CHECKLIST_DATA.length;
+      const pct = Math.round((doneCount / totalCount) * 100);
+
+      document.getElementById('checklistCounter').textContent = `${doneCount} / ${totalCount} 完成`;
+      document.getElementById('checklistProgress').style.width = `${pct}%`;
+
+      container.innerHTML = CHECKLIST_DATA.map((item, idx) => `
+        <div onclick="toggleChecklistItem(${idx})" class="p-3 rounded-xl border-2 border-[#2C2A29] cursor-pointer transition-all flex items-start gap-3 ${item.checked ? 'bg-[#E2ECE4]/70' : 'bg-[#FAF7F2] hover:bg-white'}">
+          <div class="w-6 h-6 rounded-md border-2 border-[#2C2A29] flex items-center justify-center shrink-0 mt-0.5 ${item.checked ? 'bg-[#E8998D]' : 'bg-white'}">
+            ${item.checked ? '<span class="font-black text-sm">✓</span>' : ''}
+          </div>
+          <div class="flex-1">
+            <p class="font-black scale-text-sm text-[#2C2A29] ${item.checked ? 'line-through opacity-70' : ''}">${item.title}</p>
+            <p class="scale-text-xs text-[#6E6A66]">${item.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleChecklistItem(idx) {
+      CHECKLIST_DATA[idx].checked = !CHECKLIST_DATA[idx].checked;
+      renderChecklist();
+    }
+
+    function renderFigures() {
+      const container = document.getElementById('historicalFiguresList');
+      container.innerHTML = FIGURES_DATA.map(fig => `
+        <div class="bg-white p-3.5 rounded-2xl border-2 border-[#2C2A29]">
+          <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
+            <h3 class="font-black scale-text-base text-[#2C2A29] underline-coral">${fig.name}</h3>
+            <span class="px-2 py-0.5 rounded-md bg-[#F7E8C4] border border-[#2C2A29] scale-text-xs font-bold">${fig.tag}</span>
+          </div>
+          <p class="scale-text-xs text-[#4A4745] leading-relaxed">${fig.summary}</p>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================================
+    // 8. 長輩大字模式切換 與 期末專題要求 Excel (CSV) 匯出功能
+    // =========================================================================
+    function toggleLargeTextMode() {
+      isLargeText = !isLargeText;
+      document.body.classList.toggle('large-text-mode', isLargeText);
+      const label = document.getElementById('largeTextBtnLabel');
+      const btn = document.getElementById('largeTextToggleBtn');
+      if (isLargeText) {
+        label.textContent = "長輩大字模式：開";
+        btn.classList.remove('bg-[#E2ECE4]');
+        btn.classList.add('bg-[#E8998D]');
+        showToast("🔍 已開啟長輩適讀大字體模式");
+      } else {
+        label.textContent = "長輩大字模式：關";
+        btn.classList.remove('bg-[#E8998D]');
+        btn.classList.add('bg-[#E2ECE4]');
+        showToast("已恢復標準字體大小");
+      }
+    }
+
+    function exportScheduleCSV() {
+      // 建立符合期末要求 3-(2) 的 8 欄位完整 CSV (含 UTF-8 BOM 確保 Excel 直接開啟不亂碼)
+      const headers = [
+        "天數/日期",
+        "時間區間",
+        "行程節點/景點名稱",
+        "交通方式與班次預估",
+        "歷史主題與核心意義",
+        "介入之課堂史料/人物/事件",
+        "父母貼心提醒(體力/無障礙/洗手間)",
+        "預估花費"
+      ];
+
+      const rows = [headers];
+
+      ITINERARY_DATA.forEach(day => {
+        day.events.forEach(ev => {
+          const dayCol = `${day.dateLabel} (${day.areaShort})`;
+          const timeCol = ev.time;
+          const titleCol = ev.type === 'transport' ? ev.route : ev.title;
+          const transportCol = ev.type === 'transport' ? `${ev.badge}｜${ev.subNote}` : "園區/定點漫步";
+          const topicCol = ev.type === 'spot' ? ev.significance : (ev.csvTopic || ev.title);
+          const materialCol = ev.type === 'spot' ? ev.materials.join("、") : (ev.csvMaterial || "無");
+          const tipCol = ev.subNote;
+          const costCol = ev.csvCost || "已含於套票";
+
+          rows.push([dayCol, timeCol, titleCol, transportCol, topicCol, materialCol, tipCol, costCol]);
+        });
+      });
+
+      const csvContent = "\uFEFF" + rows.map(r => 
+        r.map(field => `"${String(field).replace(/"/g, '""')}"`).join(",")
+      ).join("\r\n");
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "山海與自由的回聲_台東綠島4天3夜詳細行程表.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      showToast("📊 已下載 Excel (CSV) 每日詳細行程表！");
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastMessage');
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2600);
+    }
+  </script>
+</body>
+</html>
